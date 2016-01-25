@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: "proxima-nova", Arial, sans-serif;
   font-size: 17px;
   line-height: 1.4;
   letter-spacing: 0.2px;
@@ -171,7 +171,7 @@ em,
 }
 
 [class*="button"] {
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: "proxima-nova", Arial, sans-serif;
   display: inline-block;
   margin-right: 0.25em;
   margin-bottom: 0.6em;
@@ -195,7 +195,7 @@ em,
 }
 
 input {
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: "proxima-nova", Arial, sans-serif;
   background: none;
   border: 0.15em solid;
   outline: none;
@@ -219,7 +219,7 @@ input {
 
 select {
   -webkit-appearance: none;
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: "proxima-nova", Arial, sans-serif;
   background: none;
   border: 0.15em solid;
   outline: none;
