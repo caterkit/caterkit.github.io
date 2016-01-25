@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caterkit</title>
+    <link rel="stylesheet" href="assets/css/master.css" charset="utf-8">
+  </head>
+  <body class="bg-dark">
+
+      <header id="top" class="intro-header bg-light">
+        <div class="wrap">
+          <a class="logo v-top" href="/">
+            <img src="assets/img/caterkit.png" alt="" />
+          </a>
+          <div class="v-center">
+            <h1>We supply your organisation with <em>free</em> disposables.</h1>
+          </div>
+          <a data-scroll href="#more" class="v-bottom button-rounded learn-more c-turquoise">Learn more</a>
+        </div>
+      </header>
+
+      <section id="more" class="bg-dark">
+        <div class="wrap v-center h-center">
+          <p class="bg-text">
+            Our mission at Caterkit is to make your life easier. As a seller, it can be difficult to keep on top of your inventory, sales and outgoings so we want to make things simpler.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="split v-center h-center">
+          <div class="wrap">
+            <div class="split-pane">
+              <h3 class="emph c-yellow">Catering is <span class="not">not</span> cheap.</h3>
+            </div>
+            <div class="split-pane">
+              <p class="bg-text">
+                You are no longer required to spend your profit on disposable catering supplies. Caterkit will provide you with your disposables as and when you need them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-light">
+        <div class="split">
+          <div class="wrap">
+            <div class="split-pane">
+              <h2 class="emph c-magenta"><i>So how does this work?</i></h2>
+            </div>
+            <div class="split-pane">
+              <p class="bg-text">
+                Caterkit is a platform and you are its users.
+              </p>
+              <p>
+                By requesting a free kit from us you are in turn providing us with a blank canvas, and it is on this canvas that the magic happens. When we recieve an order for a kit we work tirelessly to find you a suitable brand match. That is, a brand that we at Caterkit feel would appropriately match your target audience.
+              </p>
+              <p>
+                When we feel that we have discovered a suitable match we check in with you and talk things over. If you're happy with our choices then we continue with our process.
+              </p>
+              <p>
+                The next stage would be to hand over to our design team. Once we had established a brand that you would feel comfortable showcasing, it would time to design and create their campaign. Once the campaign has been approved, the branded disposables are shipped to you, ready for use. It's as simple as that.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="split v-center h-center">
+          <div class="wrap">
+            <div class="split-pane">
+              <h3 class="emph c-lightblue">Caterkit core value.</h3>
+            </div>
+            <div class="split-pane">
+              <p class="bg-text">
+                When we create a campaign we want to showcase the wonderful product that you are offering your customers as well as the brand we are representing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="bottom" class="get-involved bg-light">
+        <div class="wrap">
+          <h2>Get me involved.</h2>
+          <p class="bg-text">
+            Who doesn't want free stuff?
+          </p>
+
+          <form id="get-involved" method="post" enctype="text/plain">
+
+            <div class="split">
+              <div class="split-pane">
+                <div class="cluster">
+                  <label for="name">What's your name?</label>
+                  <input required autocomplete="off" name="name" id="location" class="c-yellow" type="text" placeholder="Name">
+                </div>
+                <div class="cluster">
+                  <label for="email">Do you have an email?</label>
+                  <input required autocomplete="off" name="email" id="location" class="c-lightblue" type="email" placeholder="Email">
+                </div>
+                <div class="cluster">
+                  <label for="loc">Where are you based?</label>
+                  <input autocomplete="off" name="loc" id="loc" class="c-magenta" type="text" placeholder="Location">
+                </div>
+              </div>
+
+              <div class="split-pane">
+                <div class="cluster">
+                  <label required for="customers">Estimated number of monthly customers?</label>
+                  <select id="customers" name="customers" class="c-salmon" type="number">
+                    <option value="">Select Range</option>
+                    <option value="0 - 500">0 - 500</option>
+                    <option value="500 - 1000">500 - 1000</option>
+                    <option value="1000 - 2000">1000 - 2000</option>
+                    <option value="2000+">2000+</option>
+                  </select>
+                </div>
+                <div class="cluster">
+                  <label for="interests">Which disposables are you interested in?</label>
+                  <input data-interests type="text" name="interests">
+                  <a data-interest class="button">Hot drinks cups</a>
+                  <a data-interest class="button">Cold drinks cups</a>
+                  <a data-interest class="button">Napkins</a>
+                  <a data-interest class="button">Cutlery</a>
+                  <a data-interest class="button">Plates</a>
+                  <a data-interest class="button">Plastic containers</a>
+                  <a data-interest class="button">Board containers</a>
+                  <a data-interest class="button">Paper bags</a>
+                  <a data-interest class="button">Plastic bags</a>
+                  <a data-interest class="button">Sandwich boxes</a>
+                  <a data-interest class="button">Other</a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <a id="getInvolvedSubmit" class="button c-green">Submit</a>
+            </div>
+
+            <script type="text/javascript">
+
+              function getInterests() {
+                /**
+                 * A function to add the value of each individual interest
+                 * to the interests list input.
+                 */
+
+                var interestsList = document.querySelector('[data-interests]')
+                var interests = document.querySelectorAll('[data-interest]');
+                var i = 0;
+
+                function hasClass(element, className) {
+                  if (element.className.indexOf(className) > -1) {
+                    return true;
+                  }
+                  return false;
+                }
+
+                function addString(base, str) {
+                  return base += str;
+                }
+
+                function removeString(base, str) {
+                  return base.replace(str, '');
+                }
+
+                for (i = 0; i < interests.length; i++) {
+                  interests[i].onclick = function(e) {
+                    var interest = this.innerHTML + ', ';
+
+                    if (hasClass(this, 'active')) {
+                      this.className = 'button';
+                      interestsList.value = removeString(interestsList.value, interest);
+                    } else {
+                      this.className += ' active';
+                      interestsList.value = addString(interestsList.value, interest);
+                    }
+                  }
+                }
+              }
+
+
+              function getInvolvedSubmitText() {
+                /**
+                 * Return a dynamic mailto link for the data entered
+                 * into the form.
+                 */
+
+                var getInvolved = document.querySelector('#get-involved');
+                var body = '';
+
+                function removeTrailing(str) {
+                  // remove trailing spaces & comma
+                  return str.trim().replace(/,$/g, '');
+                }
+
+                // ASCII Line Break: %0D%0A
+                body = body + 'Hello,';
+                body = body + '%0D%0A%0D%0AI%20would%20like%20to%20get%20involved.%0D%0A';
+                body = body + '%0D%0AName:%20' + getInvolved.name.value;
+                body = body + '%0D%0AEmail:%20' + getInvolved.email.value;
+                body = body + '%0D%0ALocation:%20' + getInvolved.loc.value;
+                body = body + '%0D%0AEst.%20Customers:%20' + getInvolved.customers.value;
+                body = body + '%0D%0AInterests:%20' + removeTrailing(getInvolved.interests.value);
+                body = body + '%0D%0A%0D%0AThanks,';
+                body = body + '%0D%0A%0D%0A' + getInvolved.name.value.split(' ')[0];
+
+                return 'mailto:info@caterkit.co.uk?subject=Get%20Me%20Involved&body=' + body;
+
+              }
+
+              getInterests();
+
+              document.querySelector('#getInvolvedSubmit').onclick = function(e) {
+                // When the submit link is clicked
+                // set the href to dynamic mailto link.
+                this.href = getInvolvedSubmitText();
+              }
+
+            </script>
+
+          </form>
+
+        </div>
+      </section>
+      <footer class="page-footer bg-dark">
+        <div class="wrap v-center h-center">
+          <p class="copyright">
+            All rights reserved. Copyright &copy;Caterkit 2016
+          </p>
+        </div>
+      </footer>
+      <script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
+      <script>
+        smoothScroll.init();
+      </script>
+
+  </body>
+</html>
